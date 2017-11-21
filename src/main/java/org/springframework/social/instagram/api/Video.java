@@ -6,6 +6,7 @@ public class Video {
 	public static final String LOW_BANDWIDTH = "low_bandwidth";
 	public static final String STANDARD_RESOLUTION = "standard_resolution";
 
+	private String id;
 	private String url;
 	private int width;
 	private int height;
@@ -14,10 +15,15 @@ public class Video {
 
 	}
 
-	public Video(final String url, final int width, final int height) {
+	public Video(final String id, final String url, final int width, final int height) {
+		this.id = id;
 		this.url = url;
 		this.width = width;
 		this.height = height;
+	}
+	
+	public String getId() {
+		return id;
 	}
 
 	public String getUrl() {

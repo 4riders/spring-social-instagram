@@ -12,6 +12,7 @@ import org.springframework.social.instagram.api.PagedMediaList;
 import org.springframework.social.instagram.api.Pagination;
 import org.springframework.social.instagram.api.Relationship;
 import org.springframework.social.instagram.api.Tag;
+import org.springframework.social.instagram.api.Video;
 
 import com.fasterxml.jackson.core.Version;
 import com.fasterxml.jackson.databind.module.SimpleModule;
@@ -29,6 +30,7 @@ public class InstagramModule extends SimpleModule {
 		context.setMixInAnnotations(Comment.class, CommentMixin.class);
 		context.setMixInAnnotations(CommentsInfo.class, CommentsInfoMixin.class);
 		context.setMixInAnnotations(Image.class, ImageMixin.class);
+		context.setMixInAnnotations(Video.class, VideoMixin.class);
 		context.setMixInAnnotations(InstagramProfile.class, InstagramProfileMixin.class);
 		context.setMixInAnnotations(LikesInfo.class, LikesInfoMixin.class);
 		context.setMixInAnnotations(Location.class, LocationMixin.class);

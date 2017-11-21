@@ -6,14 +6,20 @@ public class Image {
 	public static final String THUMBNAIL = "thumbnail";
 	public static final String STANDARD_RESOLUTION = "standard_resolution";
 
+	private String id;
 	private String url;
 	private int width;
 	private int height;
 
-	public Image(String url, int width, int height) {
+	public Image(String id, String url, int width, int height) {
+		this.id = id;
 		this.url = url;
 		this.width = width;
 		this.height = height;
+	}
+	
+	public String getId() {
+		return id;
 	}
 
 	public String getUrl() {
